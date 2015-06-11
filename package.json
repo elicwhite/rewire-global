@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Eli White <github@eli-white.com> (http://eli-white.com)",
   "license": "ISC",
+  "engine": {
+    "node" : ">=0.12"
+  },
   "peerDependencies": {
     "rewire": "^2.3.4"
   },
