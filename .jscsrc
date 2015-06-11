@@ -1,0 +1,5 @@
+{
+  "plugins": ["wealthfront-javascript"],
+  "preset": "wealthfront-javascript",
+  "excludeFiles": ["node_modules/**"]
+}

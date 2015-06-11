@@ -1,0 +1,4 @@
+{
+  "extends": "./node_modules/wealthfront-javascript/.jshintrc",
+  "node": true
+}

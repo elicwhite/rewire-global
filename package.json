@@ -1,0 +1,24 @@
+{
+  "name": "global-rewire",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "author": "Eli White <github@eli-white.com> (http://eli-white.com)",
+  "license": "ISC",
+  "peerDependencies": {
+    "rewire": "^2.3.4"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "jscs": "^1.13.1",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5",
+    "sinon": "^1.15.1",
+    "wealthfront-javascript": "^1.5.4"
+  },
+  "scripts": {
+    "test": "jshint . --exclude=node_modules/ && jscs . && mocha"
+  },
+  "files": ["index.js"],
+  "main": "index.js"
+}
