@@ -7,5 +7,9 @@ node_js:
 notifications:
   email: false
 deploy:
+  provider: npm
+  email: npm@eli-white.com
   api_key:
     secure: ZnMXV5c/Fba6B75vRMHVM+AKzGRiMhubIuesKgxb4/kPggdS8qsWXXJrXjx1334pRi2vOizhiFTwXpZmZgVEFR1um8bbiRRwOFL+/wb/a/PtjTYsRY+GVz/FC4sTaZ7Z1Gwtm24YJ9s+cujqY3Th3UqjvOTP35zWLXyURHoU6MwUmCoIBMjSkCLJO/6IOkmmQCRiXf8WSU4AZJ4zcM0L9yZA7AidlPDYpIe3BuIlVAZtf0zdEF6L0vn8Llq9UuWKdPNprClSHuMSwRIxg8ZMIby9lA9uRz/yHCnkN9QT7BmpVmbbN1+S0twpxdxZFh81sqQwp6KhTmhZRe+urAp1VvvzU1xEyO55FtQbDUwzAbz7653hRrrCI+f52Dxbe0AWGJ6WMmdhYVd3e4lcqyZ0i0su2pTUEtljK9UxecjYQIhHBf/6kY6ayM/Oi4zX4aACh7Xq3F213CjMo2GqXxoCwQtuswhnayNdOIlDDD8XPi1iuDigw1K5Nt9FGaHoM0R4XsApKBtgVPtXDFCRGIJCFfchFFQYzBxsRZbBu8AsNzyybkjtsX3ZaLgIF32bLtegG5yenc6o3RNmLBueSNBMhs9QTQwb6LmuLlhpkX12SDSYfcWCALlW6HqItauMW7gP7U8hu7hTDMmxM4US21D8uAS58vocd8dXROHVjn9UivU=
+  on:
+    branch: master
