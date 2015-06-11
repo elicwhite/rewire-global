@@ -3,6 +3,7 @@ script: "npm test"
 node_js:
   - node
   - io.js
+  - "0.8"
   - "0.10"
   - "0.12"
 notifications:
