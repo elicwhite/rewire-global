@@ -1,2 +1,2 @@
-global-rewire
+rewire-global
 ======
