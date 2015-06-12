@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "author": "Eli White <github@eli-white.com> (http://eli-white.com)",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:TheSavior/rewire-global.git"
+  },
   "license": "ISC",
   "engine": {
     "node" : ">=0.12"
