@@ -42,4 +42,9 @@ describe('global-rewire', function() {
 
     assert.equal(mod.privateCall(), 2);
   });
+
+  it('should not set on non functions', function() {
+    var bool = require('../fixtures/boolean.js');
+    assert.isUndefined(bool.__set__);
+  });
 });
