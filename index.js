@@ -8,9 +8,14 @@ var exportSet = "module.exports.__set__ = " + __set__ + ";\n";
 
 var initalEnd = mod.wrapper[1];
 
+var embed = "if (typeof(module.exports) === 'object' || typeof(module.exports) === 'function') {\n" +
+  exportGet +
+  exportSet +
+'}';
+
 var GlobalRewire = {
   enable: function() {
-    mod.wrapper[1] = exportGet + exportSet + initalEnd;
+    mod.wrapper[1] = embed + initalEnd;
   },
 
   disable: function() {
