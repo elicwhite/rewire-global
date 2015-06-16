@@ -3,8 +3,8 @@ var mod = require('module');
 var __get__ = require("rewire/lib/__get__").toString();
 var __set__ = require("rewire/lib/__set__").toString();
 
-var exportGet = "module.exports.__get__ = " + __get__ + ";\n";
-var exportSet = "module.exports.__set__ = " + __set__ + ";\n";
+var exportGet = "Object.defineProperty(module.exports, '__get__', { value: " + __get__ + ", writable: true });\n";
+var exportSet = "Object.defineProperty(module.exports, '__set__', { value: " + __set__ + ", writable: true });\n";
 
 var initalEnd = mod.wrapper[1];
 
