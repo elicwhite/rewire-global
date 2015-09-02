@@ -1,7 +1,6 @@
 'use strict';
 
-function Func() {}
+/* jshint ignore:start */
+/* jscs: disable */
 
-module.exports = Func
-Func.prototype.foo = function() {
-}
+module.exports = {}
