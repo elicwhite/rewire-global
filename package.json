@@ -1,6 +1,6 @@
 {
   "name": "rewire-global",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "author": "Eli White <github@eli-white.com> (http://eli-white.com)",
@@ -10,7 +10,7 @@
   },
   "license": "ISC",
   "engine": {
-    "node" : ">=0.12"
+    "node": ">=0.12"
   },
   "peerDependencies": {
     "rewire": "^2.3.4"
@@ -26,6 +26,7 @@
   "scripts": {
     "test": "jshint . --exclude=node_modules/ && jscs . && mocha"
   },
-  "files": ["index.js"],
-  "main": "index.js"
+  "files": [
+    "index.js"
+  ]
 }
