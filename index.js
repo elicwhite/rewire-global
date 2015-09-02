@@ -8,7 +8,7 @@ var exportSet = "Object.defineProperty(module.exports, '__set__', { value: " + _
 
 var initalEnd = mod.wrapper[1];
 
-var embed = "if (typeof(module.exports) === 'object' || typeof(module.exports) === 'function') {\n" +
+var embed = "\nif (typeof(module.exports) === 'object' || typeof(module.exports) === 'function') {\n" +
   exportGet +
   exportSet +
 '}';
