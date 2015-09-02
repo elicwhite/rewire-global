@@ -1,7 +1,7 @@
 {
   "name": "rewire-global",
   "version": "1.0.6",
-  "description": "",
+  "description": "Hook rewire into every required package.",
   "main": "index.js",
   "author": "Eli White <github@eli-white.com> (http://eli-white.com)",
   "repository": {
