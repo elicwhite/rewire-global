@@ -53,4 +53,9 @@ describe('global-rewire', function() {
     assert.notInclude(Object.keys(keys), '__get__');
     assert.notInclude(Object.keys(keys), '__set__');
   });
+
+  it('should attach to files without semicolons', function() {
+    var semicolons = require('../fixtures/no-end-line-semicolons');
+    assert.isDefined(semicolons.__set__);
+  });
 });
