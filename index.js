@@ -1,24 +1,29 @@
 var mod = require('module');
 
-var __get__ = require("rewire/lib/__get__").toString();
-var __set__ = require("rewire/lib/__set__").toString();
+var getImportGlobalsSrc = require("rewire/lib/getImportGlobalsSrc");
+var getDefinePropertySrc = require("rewire/lib/getDefinePropertySrc");
 
-var exportGet = "Object.defineProperty(module.exports, '__get__', { value: " + __get__ + ", writable: true });\n";
-var exportSet = "Object.defineProperty(module.exports, '__set__', { value: " + __set__ + ", writable: true });\n";
-
+var initialStart = mod.wrapper[0];
 var initalEnd = mod.wrapper[1];
 
+var prelude = getImportGlobalsSrc();
+prelude += "(function () { ";
+
 var embed = "\nif (typeof(module.exports) === 'object' || typeof(module.exports) === 'function') {\n" +
-  exportGet +
-  exportSet +
+  getDefinePropertySrc() +
 '}';
+
+var suffix = "\n" + embed;
+suffix += "})();";
 
 var GlobalRewire = {
   enable: function() {
-    mod.wrapper[1] = embed + initalEnd;
+    mod.wrapper[0] = initialStart + prelude;
+    mod.wrapper[1] = suffix + initalEnd;
   },
 
   disable: function() {
+    mod.wrapper[0] = initialStart;
     mod.wrapper[1] = initalEnd;
   }
 };
