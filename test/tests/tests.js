@@ -58,4 +58,8 @@ describe('global-rewire', function() {
     var semicolons = require('../fixtures/no-end-line-semicolons');
     assert.isDefined(semicolons.__set__);
   });
+
+  it('should not fail on modules that pass through their dependency', function() {
+    require('../fixtures/keys-pass-through');
+  });
 });
