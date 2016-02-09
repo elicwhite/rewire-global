@@ -48,10 +48,11 @@ describe('global-rewire', function() {
     assert.isUndefined(bool.__set__);
   });
 
-  it('should not make __get__ and __set__ enumerable', function() {
+  it('should not make __get__ and __set__ and __with__ enumerable', function() {
     var keys = require('../fixtures/keys');
     assert.notInclude(Object.keys(keys), '__get__');
     assert.notInclude(Object.keys(keys), '__set__');
+    assert.notInclude(Object.keys(keys), '__with__');
   });
 
   it('should attach to files without semicolons', function() {
