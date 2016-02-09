@@ -1,25 +1,33 @@
 var mod = require('module');
 
-var __get__ = require("rewire/lib/__get__").toString();
-var __set__ = require("rewire/lib/__set__").toString();
+var getImportGlobalsSrc = require('rewire/lib/getImportGlobalsSrc');
+var getDefinePropertySrc = require('rewire/lib/getDefinePropertySrc');
 
-var exportGet = "Object.defineProperty(module.exports, '__get__', { value: " + __get__ + ", writable: true });\n";
-var exportSet = "Object.defineProperty(module.exports, '__set__', { value: " + __set__ + ", writable: true });\n";
+var initialStart = mod.wrapper[0];
+var initialEnd = mod.wrapper[1];
 
-var initalEnd = mod.wrapper[1];
+// We prepend a list of all globals declared with var so they can be overridden (without changing original globals)
+var prelude = getImportGlobalsSrc();
 
-var embed = "\nif (typeof(module.exports) === 'object' || typeof(module.exports) === 'function') {\n" +
-  exportGet +
-  exportSet +
-'}';
+// Wrap module src inside IIFE so that function declarations do not clash with global variables
+// @see https://github.com/jhnns/rewire/issues/56
+prelude += "(function () { ";
+
+// We append our special setter and getter.
+var appendix = "\n" + getDefinePropertySrc();
+
+// End of IIFE
+appendix += "})();";
 
 var GlobalRewire = {
   enable: function() {
-    mod.wrapper[1] = embed + initalEnd;
+    mod.wrapper[0] = initialStart + prelude;
+    mod.wrapper[1] = appendix + initialEnd;
   },
 
   disable: function() {
-    mod.wrapper[1] = initalEnd;
+    mod.wrapper[0] = initialStart;
+    mod.wrapper[1] = initialEnd;
   }
 };
 
