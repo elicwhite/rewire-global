@@ -1,9 +1,9 @@
 language: node_js
 script: npm test
 node_js:
-- node
-- io.js
-- '0.12'
+  - node
+  - '4'
+  - '0.12'
 notifications:
   email: false
 deploy:
