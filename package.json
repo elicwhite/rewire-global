@@ -13,13 +13,14 @@
     "node": ">=0.12"
   },
   "peerDependencies": {
-    "rewire": "^2.3.4"
+    "rewire": "^2.5.1"
   },
   "devDependencies": {
     "chai": "3.0.0",
     "jscs": "1.13.1",
     "jshint": "2.8.0",
     "mocha": "2.2.5",
+    "rewire": "2.5.1",
     "sinon": "1.15.1",
     "wealthfront-javascript": "1.5.4"
   },
