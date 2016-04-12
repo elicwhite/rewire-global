@@ -1,3 +1,5 @@
+'use strict';
+
 var mod = require('module');
 
 var getImportGlobalsSrc = require('rewire/lib/getImportGlobalsSrc');
@@ -11,13 +13,13 @@ var prelude = getImportGlobalsSrc();
 
 // Wrap module src inside IIFE so that function declarations do not clash with global variables
 // @see https://github.com/jhnns/rewire/issues/56
-prelude += "(function () { ";
+prelude += '(function () { ';
 
 // We append our special setter and getter.
-var appendix = "\n" + getDefinePropertySrc();
+var appendix = '\n' + getDefinePropertySrc();
 
 // End of IIFE
-appendix += "})();";
+appendix += '})();';
 
 var GlobalRewire = {
   enable: function() {

@@ -1,4 +1,6 @@
-/*jshint unused:false */
+/*eslint no-unused-vars: 0 */
+
+'use strict';
 
 function privateFunction() {
   return 1;
