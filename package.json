@@ -1,6 +1,6 @@
 {
   "name": "rewire-global",
-  "version": "1.0.11",
+  "version": "2.0.0",
   "description": "Hook rewire into every required package.",
   "main": "index.js",
   "author": "Eli White <github@eli-white.com> (http://eli-white.com)",
@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "eslint": "^2.7.0",
+    "eslint": "^3.0.0",
     "jscs": "^3.0.2",
     "mocha": "^2.5.3",
     "rewire": "^2.5.1",
