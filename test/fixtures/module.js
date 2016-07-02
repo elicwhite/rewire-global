@@ -6,11 +6,11 @@ function privateFunction() {
   return 1;
 }
 
-var privateState = 1;
+const privateState = 1;
 
-var PublicObj = {
+const PublicObj = {
   num: 1,
-  privateCall: function() {
+  privateCall() {
     return privateFunction();
   }
 };

@@ -2,9 +2,9 @@
 
 process.env.NODE_ENV = 'test';
 
-var chai = require('chai');
+const chai = require('chai');
 
-var sinon = require('sinon');
+const sinon = require('sinon');
 sinon.assert.expose(chai.assert, {
   prefix: ''
 });
