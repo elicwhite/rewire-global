@@ -1,6 +1,5 @@
 'use strict';
 
-/* jshint ignore:start */
-/* jscs: disable */
+/* eslint-disable */
 
 module.exports = {}
