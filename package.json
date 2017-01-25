@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "eslint": "^3.0.0",
+    "eslint": "^3.14.1",
     "jscs": "^3.0.2",
     "mocha": "^3.0.1",
     "rewire": "^2.5.1",
