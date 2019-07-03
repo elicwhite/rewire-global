@@ -22,7 +22,7 @@
     "mocha": "^3.0.1",
     "rewire": "^2.5.1",
     "sinon": "^1.17.3",
-    "wealthfront-javascript": "^4.0.0"
+    "wealthfront-javascript": "^5.0.1"
   },
   "scripts": {
     "test": "eslint . && jscs . && mocha"
