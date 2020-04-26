@@ -19,7 +19,7 @@
     "chai": "^3.5.0",
     "eslint": "^3.0.0",
     "jscs": "^3.0.2",
-    "mocha": "^3.0.1",
+    "mocha": "^7.1.2",
     "rewire": "^2.5.1",
     "sinon": "^1.17.3",
     "wealthfront-javascript": "^4.0.0"
